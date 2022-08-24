@@ -1,0 +1,25 @@
+.users {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #E7EBF0;
+  justify-content: flex-start;
+  height: 50vh;
+  overflow: auto;
+}
+
+.card-body {
+  padding: 16px;
+}
+
+.card-body>div,
+a {
+  text-align: initial;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.5;
+  letter-spacing: 0.00938em;
+  margin-bottom: 0.35em;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 14px;
+}

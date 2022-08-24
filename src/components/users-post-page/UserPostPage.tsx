@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { useQuery } from '../../common-hooks/UseQuery';
 import { setPosts, setUsers } from '../../redux/features/main/MainReducerSlice';
-import Users from '../users/users';
+import Users from '../users/Users';
 
 
 export default function UserPostPage() {
