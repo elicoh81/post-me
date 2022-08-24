@@ -17,7 +17,7 @@ export default function PostsBoard() {
 
   return (
     <div className='posts-board'>
-      <div className='board-title'>User {user?.fullName} Posts</div>
+      {userId && <div className='board-title'>User {user?.fullName} Posts</div>}
       <div className='posts'>
         {userId && posts.map((p: Post) => (
           <Card width={300} height={200} handleDelete={() => dispatch(deletePost(p.id))}>

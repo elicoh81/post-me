@@ -3,6 +3,8 @@
   padding: 10px;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start
 }
 
 .posts {
@@ -14,6 +16,7 @@
 .post-body {
   overflow: overlay;
   padding: 25px;
+  width: calc(100% - 50px);
 }
 
 .borad-title {
