@@ -1,8 +1,8 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
 import './Card.css'
 
-export default function Card({ children, width, height, handleDelete }: { children: any, width?: number, height?: number, handleDelete: () => void }) {
+export default function Card({ children, width, height, handleDelete }:
+    { children: any, width?: number, height?: number, handleDelete: () => void }) {
 
     return (
         <div className='card-fram' style={{ width: width ? `${width}px` : "220px", height: height ? `${height}px` : "165px" }}>

@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 
 export interface User {
-    id: string;
+    id: number;
     fullName: string;
     email: string;
     coordinates: { long: number, lat: number };
@@ -9,8 +9,8 @@ export interface User {
 }
 
 export interface Post {
-    id: string;
-    userId: string;
+    id: number;
+    userId: number;
     title: string;
     body: string;
 }
@@ -24,11 +24,11 @@ const slice = createSlice({
     name: 'main',
     initialState: INITIAL_STATE,
     reducers: {
-        deleteUser(state, action: PayloadAction<string>) {
+        deleteUser(state, action: PayloadAction<number>) {
             state.posts = state.posts.filter(p => p.userId !== action.payload);
             state.users = state.users.filter(u => u.id !== action.payload);
         },
-        deletePost(state, action: PayloadAction<string>) {
+        deletePost(state, action: PayloadAction<number>) {
             state.posts = state.posts.filter(p => p.id !== action.payload);
         },
         addPost(state, action: PayloadAction<Post>) {

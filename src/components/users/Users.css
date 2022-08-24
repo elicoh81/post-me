@@ -2,8 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   background-color: #E7EBF0;
-  justify-content: flex-start;
-  height: 50vh;
+  justify-content: center;
   overflow: auto;
 }
 

@@ -1,0 +1,21 @@
+.posts-board {
+  background-color: #E7EBF0;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.posts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.post-body {
+  overflow: overlay;
+  padding: 25px;
+}
+
+.borad-title {
+  text-align: initial;
+}
