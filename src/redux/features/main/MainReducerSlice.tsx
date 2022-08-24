@@ -25,11 +25,11 @@ const slice = createSlice({
     initialState: INITIAL_STATE,
     reducers: {
         deleteUser(state, action: PayloadAction<string>) {
-            state.posts = state.posts.filter(p => p.userId === action.payload);
-            state.users = state.users.filter(u => u.id === action.payload);
+            state.posts = state.posts.filter(p => p.userId !== action.payload);
+            state.users = state.users.filter(u => u.id !== action.payload);
         },
         deletePost(state, action: PayloadAction<string>) {
-            state.posts = state.posts.filter(p => p.id === action.payload);
+            state.posts = state.posts.filter(p => p.id !== action.payload);
         },
         addPost(state, action: PayloadAction<Post>) {
             state.posts.push(action.payload);
