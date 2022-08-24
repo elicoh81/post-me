@@ -6,11 +6,12 @@ import {
     Routes
 } from "react-router-dom";
 import MapPage from './components/map-page/MapPage';
+import UserPostPage from './components/users-post-page/UserPostPage';
 
 function renderPage() {
     return (
         <Routes>
-            <Route path="/" element={<App />}>
+            <Route path="/" element={<UserPostPage />}>
             </Route>
             <Route path="map" element={<MapPage />}>
             </Route>

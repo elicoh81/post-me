@@ -1,11 +1,5 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
-
-function useQuery() {
-  const { search } = useLocation();
-
-  return React.useMemo(() => new URLSearchParams(search), [search]);
-}
+import { useQuery } from '../../common-hooks/UseQuery';
 
 
 export default function MapPage() {
