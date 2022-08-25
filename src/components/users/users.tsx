@@ -4,17 +4,12 @@ import { RootState } from '../../redux/app/RootReducer';
 import { deleteUser, User } from '../../redux/features/main/MainReducerSlice';
 import Card from '../card/card';
 import './Users.css';
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Users() {
     const users: User[] = useSelector((state: RootState) => state.mainReducer.users);
     const dispatch = useDispatch();
     const navigate = useNavigate();
-
-    function handleMapNavigation(e: Event, long: number, lat: number) {
-        e.stopPropagation();
-        navigate(`map?long=${long}&lat=${lat}`, { replace: true });
-    }
 
     return (
         <div className='users'>
@@ -24,8 +19,8 @@ export default function Users() {
                         <div className='card-body'>
                             <div>{u.fullName}</div>
                             <div>{u.email}</div>
-                            <div className='user-coordinates' onClick={(e: any) => handleMapNavigation(e, u.coordinates.long, u.coordinates.lat)}
-                            >{u.coordinates.lat} {u.coordinates.long}</div>
+                            <Link to={`map?long=${u.coordinates.long}&lat=${u.coordinates.lat}`}><div className='user-coordinates' onClick={(e: any) => e.stopPropagation()}
+                            >{u.coordinates.lat} {u.coordinates.long}</div></Link>
                             <div>{u.companyName}</div>
                         </div>
                     </Card>
