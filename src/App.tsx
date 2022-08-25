@@ -35,7 +35,7 @@ function App() {
                 companyName: u.company.name
             }))));
         });
-    }, []);
+    }, [dispatch]);
 
     useEffect(() => {
         axios.get('https://jsonplaceholder.typicode.com/posts').then((res: any) => {
@@ -46,7 +46,7 @@ function App() {
                 body: p.body
             }))));
         });
-    }, []);
+    }, [dispatch]);
 
     return (
         <Router>
