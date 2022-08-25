@@ -17,6 +17,7 @@
   overflow: overlay;
   padding: 25px;
   width: calc(100% - 50px);
+  cursor: pointer;
 }
 
 .borad-title {

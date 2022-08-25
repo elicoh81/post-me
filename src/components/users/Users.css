@@ -9,6 +9,7 @@
 .card-body {
   padding: 16px;
   width: calc(100% - 32px);
+  cursor: pointer;
 }
 
 .card-body>div,
@@ -22,4 +23,8 @@ a {
   margin-bottom: 0.35em;
   color: rgba(0, 0, 0, 0.6);
   font-size: 14px;
+}
+
+.user-coordinates:hover {
+  color: blue;
 }
