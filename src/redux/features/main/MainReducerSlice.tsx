@@ -31,8 +31,11 @@ const slice = createSlice({
         deletePost(state, action: PayloadAction<number>) {
             state.posts = state.posts.filter(p => p.id !== action.payload);
         },
-        addPost(state, action: PayloadAction<Post>) {
-            state.posts.push(action.payload);
+        editPost(state, action: PayloadAction<Post>) {
+            const index = state.posts.findIndex(p => p.id === action.payload.id);
+            if (index >= 0) {
+                state.posts[index] = action.payload;
+            }
         },
         setPosts(state, action: PayloadAction<Post[]>) {
             state.posts = action.payload;
@@ -43,6 +46,6 @@ const slice = createSlice({
     }
 })
 
-export const { deleteUser, deletePost, addPost, setPosts, setUsers } = slice.actions
+export const { deleteUser, deletePost, editPost, setPosts, setUsers } = slice.actions
 
 export default slice.reducer
